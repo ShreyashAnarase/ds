@@ -170,36 +170,3 @@ int delete_min(int array[], int* heapsize)
 
 }
 
-/*int parent(int array[],int i)  //returns the parent of i'th node
-{
-	
-	if(i==0) return -1; // if i=0 then it is root node. therefore no parent.
-		if(i%2==0) return (i/2 -1);  // implies i is even and right child of its parent coz r=2(parent)+2 & l=2(parent)+1
-		
-		else return (i/2);
-}*/
-
-                         
-// this minheap can be used to implement minimum priority queue
-   	
-	/*step 1) create max/min heap from input data i.e. Heapify .
-				call heapify function on all nodes which are not leaves (n/2-1) , starting from  bottom to root.
-
-	  			 now all nodes are heapified. i.e. they satisfy the heap property(parent is greater/smaller than the children nodes)
-
-	    while(heapsize>1)
-	    {
-	
-
-			2)the first element will be the greatest or smallest. Put it in the sorted array.
-			3)exchange the first element of the heap with the last.  
-			  and now reduce the size of the heap by removing the last element.
-
-			 4) call heapify again on root node.           (note that we don't need to heapify from bottom up again coz) 
-			  As this(root) will be the only node which does not satify heap property coz we have 
-			    exchanged the last node with root node. so we only need to heapify this root node. And obviously the subtrees 
-			    affected(if any). Which is taken care of by recursion in the heapify function
-			
-			 5) repeat from step 2.  till the size of heap is greater than 0.
-		}  
-	*/		
